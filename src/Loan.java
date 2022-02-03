@@ -1,5 +1,3 @@
-package main.lab03and04;
-
 import java.util.Date;
 
 public class Loan {

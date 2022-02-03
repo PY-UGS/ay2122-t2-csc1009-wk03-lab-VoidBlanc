@@ -1,4 +1,3 @@
-package main.lab03and04;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -17,9 +16,11 @@ public class LoanApp{
         double loanAmount = input.nextDouble();
 
         Loan loan = new Loan(interest, years, loanAmount);
+        double monthly = Math.round(loan.getMonthlyPayment()*100.0)/100.0;
+        double total = Math.round(loan.getTotalPayment()*100.0)/100.0;
         System.out.println("The loan was created on " + loan.getLoanDate());
-        System.out.println("The monthly payment is " + Math.round(loan.getMonthlyPayment()*100.0)/100.0);
-        System.out.println("The total payment is " + Math.round(loan.getTotalPayment()*100.0)/100.0);
+        System.out.println("The monthly payment is " + monthly);
+        System.out.println("The total payment is " + total);
     }
 
 }
